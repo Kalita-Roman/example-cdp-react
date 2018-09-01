@@ -1,10 +1,14 @@
 {
   "scripts": {
-    "start": "babel-node src/server"
+    "start": "babel-node src/server",
+    "build": "babel-node src/webpack"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "webpack": "^4.17.1"
   }
 }

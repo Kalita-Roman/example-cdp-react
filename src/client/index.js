@@ -5,13 +5,13 @@ import { AppContainer } from 'react-hot-loader';
 renderApp();
 
 if (module.hot) {
-    module.hot.accept('./components/App.jsx', () => {
+    module.hot.accept('./components/App', () => {
         renderApp();
     });
 }
 
 function renderApp() {
-    const App = require('./components/App.jsx').default;
+    const App = require('./components/App').default;
     render(
         <AppContainer>
             <App />

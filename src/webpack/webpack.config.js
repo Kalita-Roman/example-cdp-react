@@ -1,16 +1,16 @@
-const webpack = require('webpack');
-const path = require('path');
+import webpack from 'webpack';
+import { join } from 'path';
 
-module.exports = {
-    entry: path.join(__dirname, '../client/index.js'),
+export default {
+    entry: join(__dirname, '../client/index.js'),
     entry: [
         'react-hot-loader/patch',
         'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
         'webpack/hot/only-dev-server',
-        path.join(__dirname, '../client/index.js')
+        join(__dirname, '../client/index.js')
     ],
     output: {
-        path: path.join(__dirname, '../client/bundle'),
+        path: join(__dirname, '../client/bundle'),
         publicPath: '/bundle',
         filename: 'bundle.js',
     },
@@ -38,7 +38,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
         ],
     },

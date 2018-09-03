@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import { compose } from 'compose-middleware';
 
 export default function createWebpackMiddleware(configPath) {
-    const config = require(configPath);
+    const config = require(configPath).default;
     const compiler = webpack(config);
     const webpackDevMiddleware = require('webpack-dev-middleware');
     const webpackHotMiddleware = require('webpack-hot-middleware');

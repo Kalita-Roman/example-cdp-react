@@ -18,6 +18,9 @@ export default {
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
     ],
+    resolve: {
+        extensions: ['.js', '.jsx'],
+    },
 
     module: {
         rules: [

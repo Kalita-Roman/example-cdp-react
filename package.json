@@ -1,6 +1,7 @@
 {
   "scripts": {
     "start": "babel-node src/server",
+    "init": "npm i&&npm start",
     "build": "babel-node src/webpack"
   },
   "dependencies": {

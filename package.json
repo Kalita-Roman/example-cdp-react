@@ -2,6 +2,7 @@
   "scripts": {
     "start": "babel-node src/server",
     "init": "npm i&&npm start",
+    "test": "jest --config jest.config.js --watch",
     "build": "babel-node src/webpack"
   },
   "dependencies": {
@@ -10,8 +11,6 @@
     "babel-eslint": "^9.0.0",
     "babel-loader": "7.1.5",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "compose-middleware": "^5.0.0",
     "css-loader": "^1.0.0",
@@ -28,5 +27,16 @@
     "webpack": "^4.17.1",
     "webpack-dev-middleware": "^3.2.0",
     "webpack-hot-middleware": "^2.23.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.4.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.4.0",
+    "enzyme-to-json": "^3.3.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.5.0",
+    "react-test-renderer": "^16.4.2"
   }
 }

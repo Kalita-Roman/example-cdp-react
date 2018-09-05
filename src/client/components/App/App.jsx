@@ -5,6 +5,6 @@ import Grid from '../Grid';
 
 export default () => (<div className="app" >
     <p>Hello, World!</p>
-    <Grid name="A" items={[{}, {}, {}]}/>
-    <Grid name="B" items={[{}, {}]}/>
+    <Grid name="A" items={[{name: 'a'}, {name: 'b'}, {name: 'c'}]}/>
+    <Grid name="B" items={[{name: 'e'}, {name: 'f'}]}/>
 </div>);

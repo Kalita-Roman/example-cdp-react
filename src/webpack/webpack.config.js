@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import { join } from 'path';
+import StyleLintPlugin from 'stylelint-webpack-plugin';
 
 export default {
     entry: [
@@ -17,6 +18,7 @@ export default {
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+        new StyleLintPlugin(),
     ],
     resolve: {
         extensions: ['.js', '.jsx'],

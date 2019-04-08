@@ -23,13 +23,17 @@ export default {
     resolve: {
         extensions: ['.js', '.jsx'],
     },
-
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/,
+            },
+            {
+                test: /\.jsx?$/,
+                include: /node_modules/,
+                use: ['babel-loader', 'react-hot-loader/webpack'],
             },
             {
                 test: /\.scss$/,
